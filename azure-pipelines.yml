@@ -7,14 +7,14 @@ trigger:
 - master
 
 pool:
-  name: Default
+  name: test-pool
 
 jobs:
 # First Job: Build
 - job: Build
   displayName: 'Build the Maven Project'
   pool:
-    name: 'Default'
+    name: 'test-pool'
   steps:
   - task: Maven@3
     inputs:
