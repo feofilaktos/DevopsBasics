@@ -7,14 +7,14 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  name: Default
 
 jobs:
 # First Job: Build
 - job: Build
   displayName: 'Build the Maven Project'
   pool:
-    vmImage: 'ubuntu-latest'
+    name: 'Default'
   steps:
   - task: Maven@3
     inputs:
